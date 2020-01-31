@@ -16,6 +16,7 @@ namespace ConsoleAdventure.Project.Controllers
     //NOTE Makes sure everything is called to finish Setup and Starts the Game loop
     public void Run()
     {
+      _gameService.Setup("Link");
       while (_playing)
       {
         GetUserInput();

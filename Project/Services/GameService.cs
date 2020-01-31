@@ -50,7 +50,7 @@ namespace ConsoleAdventure.Project
 
     public void Setup(string playerName)
     {
-      throw new System.NotImplementedException();
+      playerName = "Link";
     }
     ///<summary>When taking an item be sure the item is in the current room before adding it to the player inventory, Also don't forget to remove the item from the room it was picked up in</summary>
     public void TakeItem(string itemName)
