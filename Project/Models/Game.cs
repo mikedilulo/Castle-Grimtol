@@ -19,7 +19,11 @@ namespace ConsoleAdventure.Project.Models
       Item key = new Item("key", "this is a key to open the locked door");
 
       //NOTE Creating the relationships between each room
-
+      RoomOne.Exits.Add("east", RoomTwo);
+      RoomTwo.Exits.Add("west", RoomOne);
+      RoomTwo.Exits.Add("east", RoomThree);
+      RoomThree.Exits.Add("west", RoomTwo);
+      RoomThree.Exits.Add("east", RoomFour);
 
     }
   }
