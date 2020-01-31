@@ -16,7 +16,11 @@ namespace ConsoleAdventure.Project
     }
     public void Go(string direction)
     {
-      throw new System.NotImplementedException();
+      if (_game.CurrentRoom.Exits.ContainsKey(direction))
+      {
+        _game.CurrentRoom = _game.CurrentRoom.Exits[direction];
+      }
+      Messages.Add(new string("Invalid Input"));
     }
     public void Help()
     {
