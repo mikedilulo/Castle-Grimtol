@@ -15,6 +15,8 @@ namespace ConsoleAdventure.Project.Models
       Room RoomTwo = new Room("Room-Two", "You enter into a room that has small lighting. As you've gathered your surroundings you realize you are trapped in some sort of dungeon and you will need to find your way out. You start searching the room to find anything that can help out.");
       Room RoomThree = new Room("Room-Three", "You are once again trapped in another room. This room is much darker than last time, realizing you do not have a light source you maybe try feeling the wall for a brick that is out of place. During this process you come across a peep hole that is shining a tiny amount of light.");
       Room RoomFour = new Room("Room-Four", "You enter into the last room realizing the peep hole was a retina scanner and proved great success. Congratulations, you have won the game!");
+
+
       //NOTE Creating the relationships
       Item key = new Item("key", "this is a key to open the locked door");
 
@@ -24,6 +26,9 @@ namespace ConsoleAdventure.Project.Models
       RoomTwo.Exits.Add("east", RoomThree);
       RoomThree.Exits.Add("west", RoomTwo);
       RoomThree.Exits.Add("east", RoomFour);
+
+      //NOTE Adding items to rooms
+      RoomTwo.Items.Add(new Item("key", "this is a key to open the locked door"));
 
     }
 
