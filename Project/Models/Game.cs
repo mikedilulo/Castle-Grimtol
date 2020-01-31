@@ -26,5 +26,10 @@ namespace ConsoleAdventure.Project.Models
       RoomThree.Exits.Add("east", RoomFour);
 
     }
+
+    public Game()
+    {
+      Setup();
+    }
   }
 }
