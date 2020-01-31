@@ -32,6 +32,16 @@ namespace ConsoleAdventure.Project.Controllers
       //NOTE this will take the user input and parse it into a command and option.
       //IE: take silver key => command = "take" option = "silver key"
 
+      //NOTE Switch Statement that quites the game
+      switch (command)
+      {
+        case "QUIT":
+        case "Quit":
+        case "quit":
+          _playing = false;
+          break;
+      };
+
     }
 
     //NOTE this should print your messages for the game.

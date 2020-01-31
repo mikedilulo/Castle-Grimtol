@@ -38,7 +38,7 @@ namespace ConsoleAdventure.Project
     }
 
 
-    //NOTE DELETED QUITE TO BE ABLE TO CALL IT IN THE CONSOLE
+    //NOTE DELETED QUIT TO BE ABLE TO CALL IT IN THE CONSOLE
 
     ///<summary>
     ///Restarts the game 
