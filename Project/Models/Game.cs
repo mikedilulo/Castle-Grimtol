@@ -30,6 +30,10 @@ namespace ConsoleAdventure.Project.Models
       //NOTE Adding items to rooms
       RoomTwo.Items.Add(new Item("key", "this is a key to open the locked door"));
 
+
+      //NOTE Starting room for the character
+      CurrentRoom = RoomOne;
+
     }
 
     public Game()
