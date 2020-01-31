@@ -12,6 +12,14 @@ namespace ConsoleAdventure.Project.Models
 
 
 
+    //NOTE method for adding rooms in connections
+    // public void RoomDestination(Room room)
+    // {
+    //       Exits.Add(room.Name, room);
+    //       room.Exits.Add(Name, this);
+    //     }
+
+
     //NOTE Contructor 
     public Room(string name, string description)
     {
