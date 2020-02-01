@@ -46,7 +46,12 @@ namespace ConsoleAdventure.Project.Controllers
           _playing = false;
           break;
         case "go":
+          Console.Clear();
           _gameService.Go(option);
+          break;
+        case "look":
+          Console.Clear();
+          _gameService.Look();
           break;
 
 
