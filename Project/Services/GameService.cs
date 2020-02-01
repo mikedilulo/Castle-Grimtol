@@ -64,7 +64,8 @@ namespace ConsoleAdventure.Project
     ///</summary>
     public void Reset()
     {
-      _game.Setup();
+      Messages.Add(new string($"{_game.CurrentRoom.Name}"));
+      Messages.Add(new string($"{_game.CurrentRoom.Description}"));
     }
 
     public void Setup(string playerName)
@@ -74,7 +75,14 @@ namespace ConsoleAdventure.Project
     ///<summary>When taking an item be sure the item is in the current room before adding it to the player inventory, Also don't forget to remove the item from the room it was picked up in</summary>
     public void TakeItem(string itemName)
     {
-      throw new System.NotImplementedException();
+      if (_game.CurrentRoom.Items.Count == 0)
+      {
+        Messages.Add(new string($"There are no items in this room"));
+        return;
+      }
+      Messages.Add(new string($"Picking up {_game.CurrentRoom.Items.Count} items"));
+      _game.CurrentRoom.Items.AddRange(_game.CurrentRoom.Items);
+      _game.CurrentRoom.Items.Clear();
     }
     ///<summary>
     ///No need to Pass a room since Items can only be used in the CurrentRoom

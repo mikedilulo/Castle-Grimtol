@@ -57,11 +57,14 @@ namespace ConsoleAdventure.Project.Controllers
           _gameService.Help();
           break;
         case "reset":
-          //NOTE currently isnt working when I call reset which is calling setup in the service
+          //NOTE currently isnt working when I call reset which is calling setup in the service. Only prints out the room that I am in
           _gameService.Reset();
           break;
         case "inventory":
           _gameService.Inventory();
+          break;
+        case "take":
+          _gameService.TakeItem("key");
           break;
 
 
