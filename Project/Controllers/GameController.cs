@@ -64,7 +64,7 @@ namespace ConsoleAdventure.Project.Controllers
           _gameService.Inventory();
           break;
         case "take":
-          _gameService.TakeItem("key");
+          _gameService.TakeItem(option);
           break;
 
 

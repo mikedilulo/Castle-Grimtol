@@ -45,9 +45,8 @@ namespace ConsoleAdventure.Project
     {
       foreach (var item in _game.CurrentPlayer.Inventory)
       {
-        System.Console.WriteLine(item.Name);
+        System.Console.WriteLine($"You have one {item.Name}");
       }
-      System.Console.WriteLine("You have no items in your inventory");
     }
 
     public void Look()
@@ -80,8 +79,11 @@ namespace ConsoleAdventure.Project
         Messages.Add(new string($"There are no items in this room"));
         return;
       }
+      if (_game.CurrentRoom.Items[0].Name == itemName)
+      {
+        _game.CurrentPlayer.Inventory.Add(_game.CurrentRoom.Items[0]);
+      }
       Messages.Add(new string($"Picking up {_game.CurrentRoom.Items.Count} items"));
-      _game.CurrentRoom.Items.AddRange(_game.CurrentRoom.Items);
       _game.CurrentRoom.Items.Clear();
     }
     ///<summary>
