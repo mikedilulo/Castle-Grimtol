@@ -63,8 +63,7 @@ namespace ConsoleAdventure.Project
     ///</summary>
     public void Reset()
     {
-      Messages.Add(new string($"{_game.CurrentRoom.Name}"));
-      Messages.Add(new string($"{_game.CurrentRoom.Description}"));
+      _game.Setup();
     }
 
     public void Setup(string playerName)
