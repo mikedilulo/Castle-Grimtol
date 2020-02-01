@@ -18,7 +18,13 @@ namespace ConsoleAdventure.Project
 
     public void PrintMenu()
     {
-      Messages.Add(new string($"{_game.CurrentRoom.Description}"));
+      Messages.Add(new string($"{_game.CurrentRoom.Description}\n"));
+      Messages.Add(new string("Items in this room"));
+      foreach (var item in _game.CurrentRoom.Items)
+      {
+        Messages.Add(new string($"{item.Name} -- {item.Description}"));
+      }
+      Messages.Add(new string($"No items in the room\n"));
     }
     public void Go(string direction)
     {
@@ -45,8 +51,9 @@ namespace ConsoleAdventure.Project
     {
       foreach (var item in _game.CurrentPlayer.Inventory)
       {
-        System.Console.WriteLine($"You have one {item.Name}");
+        Messages.Add(new string($"{item.Name} -- {item.Description}"));
       }
+      Messages.Add(new string("You do not have anything in your inventory at this time"));
     }
 
     public void Look()
