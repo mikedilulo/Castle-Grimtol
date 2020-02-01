@@ -32,7 +32,12 @@ namespace ConsoleAdventure.Project
     }
     public void Help()
     {
-      throw new System.NotImplementedException();
+      //NOTE This are helpful tips that a player can have during the game. Appears when you type in help.
+      Messages.Add(new string("type go <direction> to move about the rooms"));
+      Messages.Add(new string("type inventory to view inventory"));
+      Messages.Add(new string("type take <item> to take item and place in inventory"));
+      Messages.Add(new string("type use <item> to use item"));
+      Messages.Add(new string("type look for the description of the room you are currently in"));
     }
 
     public void Inventory()
@@ -42,6 +47,7 @@ namespace ConsoleAdventure.Project
 
     public void Look()
     {
+      //NOTE this displays the description of the room that you are currently in.
       Messages.Add(new string($"{_game.CurrentRoom.Description}"));
     }
 
