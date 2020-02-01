@@ -93,7 +93,10 @@ namespace ConsoleAdventure.Project
     ///</summary>
     public void UseItem(string itemName)
     {
-      throw new System.NotImplementedException();
+      if (_game.CurrentRoom.Light == false)
+      {
+        System.Console.WriteLine($"Using {itemName} allows the room to be lit up and you can move forward in the game!");
+      }
     }
   }
 }

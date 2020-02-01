@@ -66,6 +66,9 @@ namespace ConsoleAdventure.Project.Controllers
         case "take":
           _gameService.TakeItem(option);
           break;
+        case "use":
+          _gameService.UseItem(option);
+          break;
 
 
       };

@@ -7,6 +7,9 @@ namespace ConsoleAdventure.Project.Models
   {
     public string Name { get; set; }
     public string Description { get; set; }
+
+    public bool Light { get; set; }
+
     public List<Item> Items { get; set; }
     public Dictionary<string, IRoom> Exits { get; set; }
 
@@ -21,12 +24,13 @@ namespace ConsoleAdventure.Project.Models
 
 
     //NOTE Contructor 
-    public Room(string name, string description)
+    public Room(string name, string description, bool light)
     {
       Name = name;
       Description = description;
       Items = new List<Item>();
       Exits = new Dictionary<string, IRoom>();
+      Light = light;
     }
   }
 }
