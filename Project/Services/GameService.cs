@@ -95,7 +95,7 @@ namespace ConsoleAdventure.Project
     {
       if (_game.CurrentRoom.Light == false)
       {
-        System.Console.WriteLine($"Using {itemName} allows the room to be lit up and you can move forward in the game!");
+        System.Console.WriteLine($"Using {itemName} allows the room to be lit up, you see your adventure continuing to the East, you should proceed forward!");
       }
     }
   }
