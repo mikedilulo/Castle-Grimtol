@@ -48,6 +48,8 @@ namespace ConsoleAdventure.Project.Controllers
         case "go":
           _gameService.Go(option);
           break;
+
+
       };
 
     }

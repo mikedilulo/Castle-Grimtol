@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ConsoleAdventure.Project.Interfaces;
 using ConsoleAdventure.Project.Models;
@@ -25,6 +26,8 @@ namespace ConsoleAdventure.Project
       {
         _game.CurrentRoom = _game.CurrentRoom.Exits[direction];
       }
+      Console.Clear();
+      //NOTE changed from Invalid Input to the actual room description because it was hitting it and it worked! 
       Messages.Add(new string($"{_game.CurrentRoom.Description}"));
     }
     public void Help()
