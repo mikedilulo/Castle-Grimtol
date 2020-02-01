@@ -38,11 +38,16 @@ namespace ConsoleAdventure.Project
       Messages.Add(new string("type take <item> to take item and place in inventory"));
       Messages.Add(new string("type use <item> to use item"));
       Messages.Add(new string("type look for the description of the room you are currently in"));
+      Messages.Add(new string("type reset to restart the current game that you are in."));
     }
 
     public void Inventory()
     {
-      throw new System.NotImplementedException();
+      foreach (var item in _game.CurrentPlayer.Inventory)
+      {
+        System.Console.WriteLine(item.Name);
+      }
+      System.Console.WriteLine("You have no items in your inventory");
     }
 
     public void Look()
@@ -59,7 +64,7 @@ namespace ConsoleAdventure.Project
     ///</summary>
     public void Reset()
     {
-      throw new System.NotImplementedException();
+      _game.Setup();
     }
 
     public void Setup(string playerName)

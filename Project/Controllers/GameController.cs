@@ -56,6 +56,13 @@ namespace ConsoleAdventure.Project.Controllers
         case "help":
           _gameService.Help();
           break;
+        case "reset":
+          //NOTE currently isnt working when I call reset which is calling setup in the service
+          _gameService.Reset();
+          break;
+        case "inventory":
+          _gameService.Inventory();
+          break;
 
 
       };
