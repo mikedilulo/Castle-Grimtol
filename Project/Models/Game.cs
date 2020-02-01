@@ -34,6 +34,12 @@ namespace ConsoleAdventure.Project.Models
       //NOTE Starting room for the character
       CurrentRoom = RoomOne;
 
+
+      //NOTE new Player
+      Player Me = new Player("Mike");
+
+      CurrentPlayer = Me;
+
     }
 
     public Game()

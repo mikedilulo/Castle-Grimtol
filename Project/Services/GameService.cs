@@ -14,13 +14,18 @@ namespace ConsoleAdventure.Project
       _game = new Game();
       Messages = new List<string>();
     }
+
+    public void PrintMenu()
+    {
+      Messages.Add(new string($"{_game.CurrentRoom.Description}"));
+    }
     public void Go(string direction)
     {
       if (_game.CurrentRoom.Exits.ContainsKey(direction))
       {
         _game.CurrentRoom = _game.CurrentRoom.Exits[direction];
       }
-      Messages.Add(new string("Invalid Input"));
+      Messages.Add(new string($"{_game.CurrentRoom.Description}"));
     }
     public void Help()
     {
